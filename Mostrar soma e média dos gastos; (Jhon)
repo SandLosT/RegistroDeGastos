@@ -1,1 +1,12 @@
+void mostrarSomaEMedia(struct Gasto *gastos, int numGastos) {
+    float soma = 0;
+    for (int i = 0; i < numGastos; i++) {
+        soma += gastos[i].valor;
+    }
 
+    if (numGastos > 0) {
+        printf("Soma dos gastos: %.2f\n", soma);
+        printf("Média dos gastos: %.2f\n", soma / numGastos);
+    } else {
+        printf("Não há gastos cadastrados.\n");
+    }
